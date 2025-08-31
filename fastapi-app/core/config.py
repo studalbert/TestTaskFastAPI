@@ -21,7 +21,7 @@ class Settings(BaseSettings):
         env_nested_delimiter="__",
         env_prefix="APP_CONFIG__",
     )
-    run = RunConfig()
+    run: RunConfig = RunConfig()
     db: DatabaseConfig
 
 
