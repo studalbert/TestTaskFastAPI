@@ -36,7 +36,6 @@ cd TestTaskFastAPI
 ```bash
 docker compose up -d
 ```
-### Сервис будет доступен по адресу: http://localhost:8000
 
 Swagger документация доступна по адресу: http://localhost:8000/docs
 
