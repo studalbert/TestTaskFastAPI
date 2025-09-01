@@ -7,7 +7,7 @@ from .crud_questions import get_questions, create_question, get_question, delete
 from models import db_helper
 from schemas.question import QuestionCreate, QuestionRead, QuestionWithAnswersRead
 
-router = APIRouter(tags=['Questions'])
+router = APIRouter()
 
 @router.get("/", response_model=list[QuestionRead])
 async def get_all_questions(session: Annotated[
@@ -34,7 +34,7 @@ async def get_question_by_id(session: Annotated[
     raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                         detail=f'Question {id} not found')
 
-@router.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.delete("/{id}/", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_question_by_id(session: Annotated[
         AsyncSession,
         Depends(db_helper.session_getter),
