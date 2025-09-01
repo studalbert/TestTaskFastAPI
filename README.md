@@ -27,8 +27,8 @@ API-сервис для управления вопросами и ответа�
 ### 1. Склонировать репозиторий:
 
 ```bash
-git clone <YOUR_REPO_URL>
-cd <REPO_NAME>
+git clone https://github.com/studalbert/TestTaskFastAPI.git
+cd TestTaskFastAPI
 ```
 ### 2. Создать .env файл с настройками базы данных по образцу .env.template
 
