@@ -34,7 +34,7 @@ cd TestTaskFastAPI
 
 ### 3. Запустить контейнеры в фоне
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 ### Сервис будет доступен по адресу: http://localhost:8000
 
