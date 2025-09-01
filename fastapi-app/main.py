@@ -17,7 +17,7 @@ async def lifespan(app: FastAPI):
     await db_helper.engine()
 
 app = FastAPI(lifespan=lifespan)
-app.include_router(api_router, prefix='/questions', tags='Questions')
+app.include_router(api_router)
 
 if __name__ == '__main__':
     uvicorn.run("main:app",
